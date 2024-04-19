@@ -1,7 +1,7 @@
 This database has the following two tables:
 
 1.	items_ordered
-2.	customers
+2.	customers 
 
 Task 1 (Comparison Operators)
 
