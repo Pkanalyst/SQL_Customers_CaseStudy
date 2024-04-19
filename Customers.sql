@@ -23,7 +23,7 @@ set newo_d =str_to_date(order_date,"%d-%c-%Y");
 
 'Items Table = items_ordered Table'
 
-															'Task 1 (Comparison Operators)'
+									'Task 1 (Comparison Operators)'
 
 '1.	From the items_ordered table, select a list of all items purchased for customerid 10449. Display the customerid, item, and price for this customer.'
 
@@ -45,7 +45,7 @@ where item like "s%";
 select distinct(item) from items;
 
 
-															'Task  2 (Aggregate Functions)'
+									'Task  2 (Aggregate Functions)'
 
 
 '1.	Select the maximum price of any item ordered in the items_ordered table. Hint: Select the maximum price only.'
@@ -67,7 +67,7 @@ select count(*) as Total_Rows from items;
 select min(price) from items
 where item="tent";
 
-															'Task  3 (Group By clause)'
+									'Task  3 (Group By clause)'
 
 
 '1.	How many people are in each unique state in the customers table? Select the state and display the number of people in each. Hint: count is used '
@@ -88,7 +88,7 @@ group by Item;
 select Customerid,count(*) Total_Orders from items
 group by Customerid;
 
-															'Task  4 (HAVING clause)'
+									'Task  4 (HAVING clause)'
 
 
 '1.	How many people are in each unique state in the customers table that have more than one person in the state? Select the state and display the '
@@ -112,7 +112,7 @@ select Customerid,count(*) as Total_Orders from items
 group by Customerid
 having Total_orders>1;
 
-														'Task  5 (ORDER BY clause)'
+									'Task  5 (ORDER BY clause)'
 
 
 '1.	Select the lastname, firstname, and city for all customers in the customers table. Display the results in Ascending Order based on the lastname.'
@@ -136,7 +136,7 @@ select item,price from items
 having price>10
 order by (price) asc;
 
-											 'Task  6 (Combining Conditions & Boolean Operators).'
+								 'Task  6 (Combining Conditions & Boolean Operators).'
 
 
 '1.	Select the customerid, order_date, and item from the items_ordered table for all items unless they are 'Snow Shoes' or if they are 'Ear Muffs'. 
@@ -164,7 +164,7 @@ where price between 10 and 80;
 select Firstname,city,state from customer
 where state in ("Arizona", "Washington", "Oklahoma", "Colorado","Hawaii");
 
-														'Task  8 (Mathematical Functions)'
+								'Task  8 (Mathematical Functions)'
 
 
 '1. Select the item and per unit price for each item in the items_ordered table. Hint: Divide the price by the quantity.'
@@ -172,7 +172,7 @@ where state in ("Arizona", "Washington", "Oklahoma", "Colorado","Hawaii");
 select item ,(price/quantity) as Per_Unit_Price from items;
 
 
-                                                         'Task  9 (Table Joins)'
+                                                                  'Task  9 (Table Joins)'
 
 
 '\'1.	Write a query using a join to determine which items were ordered by each of the customers in the customers table. Select the customerid,\''
